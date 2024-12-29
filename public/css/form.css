@@ -1,0 +1,740 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  ragistration form wrapper  */
+
+.ragistrationform {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0px 0;
+	letter-spacing:0;
+}
+
+.ragistrationform h2 {
+	font-family: "AvenirLTStd-Black";
+	margin: 0 auto 10px auto;
+	font-size: 28px;
+	line-height: 30px;
+	color: #FF0000;
+}
+
+
+.ragistrationform h3 {
+	font-family: "AvenirLTStd-Black";
+	width: 100%;
+	margin: 0 auto 35px auto;
+	font-size: 28px;
+	line-height: 36px;
+	color: #333;
+	text-align: center;
+	letter-spacing:0;
+}
+.ragistrationform h3 u {
+	color: #0095da;
+	display: block;
+	margin-bottom: 5px;
+}
+
+
+.ragistrationform h4 {
+  font-family: "AvenirLTStd-Black";
+	margin: 0 auto 15px auto;
+	font-size: 18px;
+	line-height: 24px;
+	color: #ee322a;
+}
+.ragistrationform h5 {
+  font-family: "AvenirLTStd-Black";
+	margin: 25px auto 0px auto;
+	font-size: 16px;
+	line-height: 22px;
+	color: #000;
+}
+.ragistrationform label {
+	display: block;
+	width: 100%;
+	color: #333;
+	/*letter-spacing: 0.5px;
+	text-transform: uppercase;*/
+	font-size: 16px;
+	padding: 0 0 0 0px;
+}
+.ragistrationform label span {
+	color: #ff0000;
+}
+
+.innercontainwrapper1 .ragistrationform label {
+	font-family: "AvenirLTStd-Black";
+	color:#0073bd;
+}
+
+.ragistrationform input, .ragistrationform textarea {
+	width: 93%;
+	/*border: 1px solid #c8c8c8;
+	border-top: 0px;
+	border-radius: 5px;*/
+	border: 0;
+	box-shadow: none;
+	padding: 12px 3%;
+	line-height: 20px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #000;
+	background: #e8e8e8 !important;
+}
+.ragistrationform select {
+	/*-webkit-appearance: none;*/
+	width: 100%;
+	border: 0px;
+	box-shadow: none;
+	height: 44px;
+	padding: 12px 3% 12px 3%;
+	line-height: 20px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #000;
+	background: #e8e8e8 !important;
+	
+}
+.ragistrationform input.error, .ragistrationform select.error {
+	border: 2px solid #ff0000;
+	/*border-top: 0px;*/
+}
+
+.ragistrationform input[type="checkbox"] {
+	width: auto;
+	padding: 0;
+	margin: 10px;
+}
+.ragistrationform input[type="checkbox"].error {
+	border: 1px solid #ff0000 !important;
+}
+
+
+
+
+.ragistrationform button {
+	width: 180px;
+	margin: 20px auto 0 auto;
+	display: block;
+	border: 0px;
+	box-shadow: none;
+	border-radius: 5px;
+	padding: 14px 0;
+	line-height: 22px;
+	font-family: "AvenirLTStd-Black";
+	font-size: 20px;
+	color: #fff;
+	background: #0095da;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+.ragistrationform button:hover {
+	background: #000;
+}
+
+
+
+.ragformcolmain {
+	display: table;
+	content: "";
+	width: 100%;
+	clear: both;
+	margin: 15px 0;
+}
+.ragformcol1 {
+	float: left;
+	display: block;
+	width: 48%;
+}
+.ragformcol2 {
+	float: right;
+	display: block;
+	width: 48%;
+}
+.ragformcol3 {
+	float: left;
+	display: block;
+	width: 48%;
+	margin: 10px 0;
+}
+.ragformcol4 {
+	float: right;
+	display: block;
+	width: 48%;
+	margin: 10px 0;
+}
+.ragformbotomtext p {
+	font-size: 14px !important;
+	letter-spacing: 0.5px;
+	line-height: 22px;
+	margin: 10px 0 0 0;
+}
+
+.error {
+	color: #ff0000 !important;
+	text-transform: capitalize !important;
+}
+
+.ragformcolmain1 {
+	margin-top: 30px;
+}
+.ragformcolmain2 {
+	display: table;
+	content: "";
+	width: 100%;
+	clear: both;
+	margin: 5px 0;
+}
+.ragformcolmain3 {
+	margin: 10px 0;
+}
+
+/*  End  */
+
+
+
+/*  View Profile  */
+
+.viewprofilebox {
+	display:inline-block;
+	vertical-align:middle;
+	width:26%;
+	padding:2%;
+	margin:1%;
+	border:2px solid #e5e5e5;
+	border-radius:7px;
+}
+.viewprofilebox h6 {
+	line-height: 18px;
+	font-size: 16px;
+	letter-spacing:0;
+	color:#666;
+	margin:0 0 5px 0;
+}
+.viewprofilebox p {
+	line-height: 18px;
+	font-family: "AvenirLTStd-Black";
+	font-size: 16px;
+	letter-spacing:0;
+	color:#0073bd;
+}
+
+
+/*  End  */
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1440px){
+	
+	.ragistrationform h3 {
+		margin: 0 auto 20px auto;
+		font-size: 22px;
+		line-height: 30px;
+	}
+	
+}
+
+
+
+
+@media only screen and (max-width: 1100px){
+	
+	.ragistrationform h3 {
+		width: 100%;
+		margin: 0 auto 20px auto;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	
+	
+	.ragistrationform {
+		width: 90%;
+	}
+	
+	
+	.viewprofilebox {
+		width:26%;
+		padding:2%;
+		margin:1%;
+	}
+	.viewprofilebox h6 {
+		line-height: 18px;
+		font-size: 14px;
+		margin:0;
+	}
+	.viewprofilebox p {
+		line-height: 18px;
+		font-size: 15px;
+	}
+	
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 800px){
+	
+	.viewprofilebox {
+		width:42%;
+		padding:2%;
+		margin:1%;
+	}
+	
+}
+
+@media only screen and (max-width: 650px){
+	
+	.ragistrationform h3 {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	
+	.ragformcolmain {
+		margin: 0px 0;
+	}
+	.ragformcol1 {
+		float: none;
+		display: block;
+		width: 100%;
+		margin: 15px 0;
+	}
+	.ragformcol2, .ragformcol3, .ragformcol4 {
+		float: none;
+		display: block;
+		width: 100%;
+		margin: 15px 0;
+	}
+	
+	
+	.ragistrationform h3 a {
+		display:block;
+		padding:10px 0px;
+		border-radius:60px;
+	}
+	
+	
+	.viewprofilebox {
+		width:92%;
+		padding:3%;
+		margin:10px auto;
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
+
+input:focus,
+select:focus, 
+textarea:focus {
+	box-shadow: 0 0 5px #007eca;
+	border: 1px solid #007eca;
+	background: #C90205;;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	position: relative;
+	z-index: 9999;
+}
+
+
+/*  cloud form wrapper  */
+.cloudformwrapper {
+	margin: 0;
+	padding: 0;
+	/*width: 92%;
+	padding: 4%;
+	border: 1px solid #e1e1e1;
+	background: #fff;
+	border-radius: 7px;*/
+}
+.cloudformwrapper h6 {
+	font-family: 'Conv_BentonSans-Black';
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 1px;
+	color: #000;
+}
+.cloudformtb {
+	padding: 15px 0;
+}
+.cloudformtb h3{
+	font-weight:bold;
+	line-height:24px;
+	margin-bottom:10px;
+}
+.cloudformtb label {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.cloudformtb span {
+	padding: 5px;
+}
+.cloudformwrapper input {
+	padding: 7px 1%;
+	width: 90%;
+}
+
+.cloudformtb1 {
+	padding: 20px 5%;
+}
+.cloudformtb2 {
+	/*padding: 20px 5%;*/
+	padding: 20px 13% 20px 5%;
+	background: #f2f2f2;
+}
+.cloudform {
+    float: left;
+    display: block;
+    width: 33%;
+}
+.cloudformmain {
+    display: table;
+    content: "";
+    width: 100%;
+    clear: both;
+    margin: 15px 0;
+}
+.cloudform input, .cloudform textarea {
+    width: 85%;
+    border: 0;
+    box-shadow: none;
+    padding: 12px 3%;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #000;
+    background: #f2f2f2 !important;
+}
+
+.cloudformmaintext p {
+    font-size: 14px !important;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    margin: 0 25px;
+}
+/*  End  */
+
+
+/* The container */
+.radiobtn1 {
+	display: inline-block !important;
+	position: relative;
+	padding-left: 35px;
+	margin: 10px 5px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.radiobtn1 input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.radiobtn1 span {
+	padding: 0;
+	margin: 0;
+}
+.radiocheckmark1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+	border: 1px solid #cccccc;
+}
+.radiobtn1:hover input ~ .radiocheckmark1 {
+	background-color: #ccc;
+}
+.radiobtn1 input:checked ~ .radiocheckmark1 {
+	background-color: #2196F3;
+}
+.radiocheckmark1:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.radiobtn1 input:checked ~ .radiocheckmark1:after {
+	display: block;
+}
+.radiobtn1 .radiocheckmark1:after {
+	top: 7px;
+	left: 7px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+.radiobtn2 {
+	display: inline-block !important;
+	position: relative;
+	padding-left: 22px;
+	margin: 10px 5px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.radiobtn2 input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.radiobtn2 span {
+	padding: 0;
+	margin: 0;
+}
+.radiocheckmark2 {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 14px;
+	width: 14px;
+	background-color: #eee;
+	border-radius: 50%;
+	border: 1px solid #cccccc;
+}
+.radiobtn2:hover input ~ .radiocheckmark2 {
+	background-color: #ccc;
+}
+.radiobtn2 input:checked ~ .radiocheckmark2 {
+	background-color: #2196F3;
+}
+.radiocheckmark2:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.radiobtn2 input:checked ~ .radiocheckmark2:after {
+	display: block;
+}
+.radiobtn2 .radiocheckmark2:after {
+	top: 5px;
+	left: 5px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+.checkbox1 {
+display: inline-block !important;
+	width: auto;
+  position: relative;
+  padding-left: 24px;
+	margin: 10px 10px 12px 10px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox1 span {
+	padding: 0;
+	margin: 0;
+}
+.checkbox1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkboxmark1 {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: #eee;
+	border: 1px solid #cccccc;
+}
+.checkbox1:hover input ~ .checkboxmark1 {
+  background-color: #ccc;
+}
+.checkbox1 input:checked ~ .checkboxmark1 {
+  background-color: #2196F3;
+}
+.checkboxmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox1 input:checked ~ .checkboxmark1:after {
+  display: block;
+}
+.checkbox1 .checkboxmark1:after {
+  left: 5px;
+  top: 2px;
+  width: 2px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.othercheckinput {
+	display: inline-block !important;
+	position: relative;
+}
+.othercheckinput input {
+	width: 130px;
+	padding: 8px 10px;
+}
+
+
+/*  End  */
+
+
+.cloudformtb button {
+	width: 180px;
+	margin: 0px auto 0 auto;
+	display: block;
+	border: 0px;
+	box-shadow: none;
+	border-radius: 5px;
+	padding: 15px 10px;
+	line-height: 20px;
+	font-size: 16px;
+	color: #fff;
+	background: #0099ff;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px  #0077c7;
+	font-family: "AvenirLTStd-Black";
+}
+.cloudformtb button:hover {
+	background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#rd_business-error, #rd_plans-error, #ctiprovider-error {
+	/*position: absolute;
+	left: 0;*/
+	min-height: 30px;
+	width: 200px;
+	font-size: 12px;
+}
+
+/*#providererror, #businesserror, #reasonerror  {
+	min-height: 35px;
+}*/
+
+#reasonerror {
+	font-size: 12px;
+	color: #ff0000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #b1b1b1; 
+ float: right; 
+}
+.rating label span {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	margin-top: -5px;
+}
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #fbd400;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #fbd400;  } 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*  main chat box */
+
+.mainchatbox {
+	width:100%;
+	clear:both;
+	display:table;
+	content:"";
+	position:relative;
+	background:#fff;
+	border-radius:10px;
+	z-index:99;
+}
+.mainchatboxleft {
+	float:left;
+	display:block;
+	width:34%;
+	padding:0;
+	background:#3f6cda;
+	border-radius:10px;
+	color:#fff;
+	max-height:450px;
+	overflow-x:hidden;
+}
+.mainchatboxright {
+	float:right;
+	display:block;
+	width:66%;
+	position:relative;
+	overflow-x:hidden;
+	overflow: auto;
+	display: flex;
+	flex-direction: column-reverse;
+	max-height:450px;
+}
+
+/*  End  */
+
+
+
+/*  attendechatmainbox   */
+
+.attendechatmainbox {
+	width:100%;
+	display:table;
+	clear:both;
+	content:"";
+	font-size:14px;
+	line-height:normal;
+	letter-spacing:0;
+	padding:0 0 0px 0;
+	position:relative;
+	
+}
+.attendechatmainbox hr {
+	height:2px;
+	width:100%;
+	display:table;
+	clear:both;
+	border:0;
+	box-shadow:none;
+	background:#dedede;
+}
+.attendechatmainbox h6 {
+	line-height:normal;
+	margin:0;
+	padding:0;
+	font-family: "AvenirLTStd-Black";
+	margin:0 0 5px 0;
+	display:table;
+	clear:both;
+	content:"";
+	width:100%;
+}
+.attendechatmainbox h6 span {
+	font-size:10px;
+	color:#3f6cda;
+	font-family: "AvenirLTStd-Black";
+}
+.attendechatmainbox p {
+	line-height:normal;
+	margin:0;
+	padding:0;
+}
+.attendechatbox1 {
+	background:#f1f0f0;
+	padding:10px 4%;
+	margin:2%;
+	width:70%;
+	border-radius:7px;
+	clear:both;
+	display:table;
+	content:"";
+}
+.attendechatbox2 {
+	background:#3f6cda;
+	padding:10px 4%;
+	margin:0 8% 2% 2%;
+	width:70%;
+	border-radius:7px;
+	color:#fff;
+	float:right;
+	position:relative;
+}
+.attendechatbox2:after {
+	clear:both;
+	display:table;
+	content:"";
+	width:100%;
+}
+.attendechatbox2:before {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-top: 0px solid transparent;
+	border-left: 30px solid #3f6cda;
+	border-bottom: 30px solid transparent;
+	display: inline-block;
+	vertical-align: middle;
+	position:absolute;
+	top:0;
+	right:-6%;
+}
+.attendechatbox2 h6 span {
+	color:#fff;
+}
+.attendechattextsend {
+	width:100%;
+	padding:5px 2%;
+	background:#fff;
+	/*position:absolute;*/
+	position: -webkit-sticky;
+	position: sticky;
+	bottom:0;
+	left:0;
+	content:"";
+	display:table;
+	clear:both;
+	border-bottom-left-radius:7px;
+	border-bottom-right-radius:7px;
+	border-top:2px solid #dedede;
+	z-index: 999;
+}
+.attendechattextsend textarea {
+	width:82%;
+	padding:5px 2%;
+	border:0;
+	box-shadow:none;
+	letter-spacing:0;
+	font-size:14px;
+	font-family: "AvenirLTStd-Book";
+	border-radius:5px;
+	display:inline-block;
+	vertical-align:middle;
+	margin:0 7% 0 0;
+}
+.attendechattextsend button {
+	border:0;
+	box-shadow:none;
+	background:none;
+	letter-spacing:0;
+	font-size:18px;
+	font-family: "AvenirLTStd-Book";
+	display:inline-block;
+	vertical-align:middle;
+	color:#3f6cda;
+	background:#3329e2;
+	cursor:pointer;
+	border-radius:50%;
+	color:#fff;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+}
+
+/*  End  */
+
+/*  Chat User Box Main Wrapper  */
+
+.chatuserboxmain {
+	width:100%;
+	margin:0 auto;
+	padding:0;
+	display:block;
+	clear:both;
+	content:"";
+	position:relative;
+	min-height:450px;
+}
+.chatuserboxmain h6 {
+	padding:10px 5%;
+	width:100%;
+	border-bottom:2px solid #3974fa;
+	line-height:20px;
+	font-size:13px;
+	color:#abc5ff;
+	clear:both;
+	display:table;
+	content:"";
+	position:relative;
+	cursor:pointer;
+}
+.chatuserboxmain h6 span {
+	display:block;
+	font-size:16px;
+	font-family: "AvenirLTStd-Black";
+	color:#fff;
+}
+.chatuserboxmain h6 i {
+	font-size:12px;
+	font-family: "AvenirLTStd-Black";
+	background:#fff;
+	border-radius:50%;
+	color:#000;
+	width:26px;
+	height:26px;
+	line-height:26px;
+	position:absolute;
+	right:10px;
+	top:10px;
+	text-align:center;
+	letter-spacing:0;
+	display:none;
+}
+.chatuserboxmain h3 {
+	padding:12px 5%;
+	width:100%;
+	line-height:22px;
+	font-size:18px;
+	color:#000;
+	background:#fff;
+	font-family: "AvenirLTStd-Black";
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	clear:both;
+	display:table;
+	content:"";
+	z-index:999;
+}
+
+
+/*  End  */
+
+
+/*  Chat Name  */
+
+.attendechatnameright {
+	background:#fff;
+	color:#000;
+	width:100%;
+	padding:12px 3%;
+	-webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.23);
+	box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.23);
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	clear:both;
+	display:table;
+	content:"";
+	z-index:999;
+}
+.attendechatnameright span {
+	font-size:18px;
+	font-family: "AvenirLTStd-Black";
+	color:#3f6cda;
+}
+
+/*  End  */
+
+
+@media only screen and (max-width: 650px){ 
+
+	
+	.mainchatboxleft {
+		width:40%;
+		max-height:380px;
+	}
+	.mainchatboxright {
+		width:60%;
+		max-height:380px;
+	}	
+	.attendechatmainbox {
+		font-size:10px;
+	}
+	.attendechatmainbox h6 span {
+		font-size:7px;
+	}
+	.attendechatbox1 {
+		padding:5px 2%;
+		margin:2%;
+		width:70%;
+	}
+	.attendechatbox2 {
+		padding:5px 2%;
+		margin:0 8% 2% 2%;
+	}
+	.attendechattextsend {
+		padding:3px 2%;
+	}
+	.attendechattextsend textarea {
+		width:82%;
+		padding:3px 2%;
+		font-size:10px;
+		margin:0 3% 0 0;
+	}
+	.attendechattextsend button {
+		font-size:10px;
+		width:20px;
+		height:20px;
+		line-height:20px;
+	}
+	.chatuserboxmain h6 {
+		padding:5px 5%;
+		line-height:normal;
+		font-size:9px;
+	}
+	.chatuserboxmain h6 span {
+		font-size:11px;
+	}
+	.chatuserboxmain h6 i {
+		font-size:8px;
+		width:18px;
+		height:18px;
+		line-height:18px;
+		right:5px;
+		top:5px;
+	}
+	.chatuserboxmain h3 {
+		padding:5px 5%;
+		line-height:normal;
+		font-size:11px;
+	}
+	.attendechatnameright {
+		padding:5px 3%;
+	}
+	.attendechatnameright span {
+		font-size:11px;
+	}
+	
+	
+
+}
+

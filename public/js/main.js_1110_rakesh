@@ -1,0 +1,311 @@
+$ (function(){
+const chatForm = document.getElementById("chat-form");
+const chatMessages = document.querySelector(".chat-messages");
+const imgUser = document.getElementById("img-user");
+const userList = document.getElementById("users");
+const usersList = document.getElementById("user-list");
+const pageUsers = document.getElementById("users-page");
+// const totalUsers = document.getElementById('total-users');
+const page = document.getElementById("page").value;
+const username = document.getElementById("name").value;
+
+var user_cookie;
+var email = $("#email").val();
+
+if (email) {
+  setCookie(
+    "userCookie",
+    [
+      $("#name").val(),
+      $("#email").val(),
+      $("#job_title").val(),
+      $("#company").val(),
+      $("#user_id").val(),
+    ],
+    1
+  );
+  user_cookie = getCookie("userCookie");
+} else {
+  user_cookie = getCookie("userCookie");
+}
+
+var user_cookie = user_cookie.split(",");
+console.log(user_cookie);
+
+const socket = io("https://dev.expressbpd.in/main");
+// var socket = io('http://localhost:3000/main');
+// console.log(username, room);
+
+//Live Attendees Count
+socket.emit("attendeesCount", {
+  name: user_cookie[0],
+  email: user_cookie[1],
+  jobtitle: user_cookie[2],
+  company: user_cookie[3],
+  page: page,
+  userId: user_cookie[4],
+});
+
+socket.on("announcement", function (data) {
+  // const alertMsg =
+  //   "Announcement Received \n Title: - " +
+  //   data.title +
+  //   " \n Message: - " +
+  //   data.message +
+  //   " \n URL: - " +
+  //   data.url;
+      // $("#announsmes .tac").html(data.title);
+    // $("#announsmes .desc").html(data.message);
+
+    // if(data.url){
+    //   $("#announsmes .actionBtn a").html(data.url);
+    // }else{
+    //   $("#announsmes .actionBtn ").hide();
+    // }
+   
+  // imgUser.src = data.url;
+
+<<<<<<< HEAD
+//Live Attendees Count
+socket.emit("attendeesCount", {
+  name: user_cookie[0],
+  email: user_cookie[1],
+  jobtitle: user_cookie[2],
+  company: user_cookie[3],
+  page: page,
+  userId: user_cookie[4],
+=======
+  const alertMsg = ' <div id="announsmes" class="popmain3"><div class="popmainheading">Announcement Message</div><div class="popmain1con1"> <div class="popupformmain1"> <p class="tac">'+data.title+'</p><p class="desc">'+data.message+'</p>  <br><div class="btn2 actionBtn "><a href="'+data.url+'">Join Now</a></div> </div></div> <button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"></button></div>';
+
+  $.fancybox.open(alertMsg);
+>>>>>>> 1d3361a7a136ac90cca353f51a5838dac3b41ea7
+});
+
+socket.on("attendeesCount", (data) => {
+console.log(data);
+  document.getElementById("livecount").innerHTML = data.length;
+
+  usersList.innerHTML = `
+ 
+      ${data
+        .map(
+          (user) => `
+      <div class="popupattenchat">
+      <h6><span>${user.name}</span>${user.socketId}, ${user.jobtitle}, ${user.company}</h6>
+      
+      <a href="javascript:;" class="onechat" onclick="${user.socketId}"><i class="fa fa-comments"></i></a>
+
+      <a data-fancybox data-src="#HirenMistry" data-options='{"touch": false}' href="javascript:;"><i
+              class="fa fa-envelope"  onclick="sendmessage(${user.userId}, '${user.name}', '${user.email}');"></i></a>
+
+      <input type="hidden" name="user[]" class="active_users" value="${user.userId}" />
+    </div>
+        `
+        )
+        .join("")}
+  `;
+});
+
+$(document).on("click", ".onechat",function(){
+  var socketChatId = $(this).attr("onclick");
+  var name = $('#name').val();
+
+  socket.emit("chatInvitation", {
+    socketid: socketChatId,
+    username: name
+  });
+  // console.log(script);
+});
+
+socket.on("chatInvitation", (data) => {
+  // console.log(data);
+  // alert(data);
+  // const chatInvite = document.getElementById('Hirenvideomsg');
+  
+  const chatInvite = `<div id="Hirenvideomsg" class="popmain3">
+  <div class="popmainheading">Chat Invitation</div>
+    <div class="popmain1con1">
+        <div class="popupformmain1">
+            <p class="tac"><label><span>${data}</span><br>Is inviting you to have a private chat </label></p>
+            <br>
+            <div class="btn2 tac"><a href="javascript:" id="chatAccept" onclick="${data}">Accept</a> <a href="javascript:" id="chatDecline">Decline</a></div>
+        </div>
+    </div>
+  </div>`;
+
+  $.fancybox.open(chatInvite);
+
+});
+
+socket.on("sessionStart", (data) => {
+
+  var users = $('.active_users').map(function(i, el) {
+    return el.value;
+  });
+
+  $.ajax({
+    url: JS_URL+'',
+    data: {event: data.event_id, users: users, _token: $("input[name='_token']").val(),},
+    type: 'POST',
+    success: function(response){
+      console.log(response);
+    }
+  });
+});
+
+socket.on("totalattendees", (data) => {
+   console.log(data);
+  document.getElementById("totalcount").innerHTML = data.length;
+
+  // totalUsers.innerHTML = `
+  //     <tr>
+  //       <th>Name</th>
+  //       <th>Email</th>
+  //       <th>jobtitle</th>
+  //       <th>Company</th>
+  //     </tr>
+  //     ${data.map(user => `
+  //       <tr>
+  //         <td>${user.name}</td>
+  //         <td>${user.email}</td>
+  //         <td>${user.jobtitle}</td>
+  //         <td>${user.company}</td>
+  //       </tr>
+  //       `).join('')}
+  // `;
+});
+
+//Join Chat Room
+<<<<<<< HEAD
+// socket.emit("joinRoom", { username, room='' });
+=======
+// socket.emit("joinRoom", { username, room });
+>>>>>>> 1d3361a7a136ac90cca353f51a5838dac3b41ea7
+
+//Get Rooms & Users
+socket.on("roomUsers", ({ room, users }) => {
+  // outputRoomName(room);
+<<<<<<< HEAD
+
+  console.log(users);
+  outputUsers(users);
+=======
+  // outputUsers(users);
+>>>>>>> 1d3361a7a136ac90cca353f51a5838dac3b41ea7
+});
+
+// Get room and users
+socket.on("message", (message) => {
+  // console.log(message);
+  outputMessage(message);
+
+  //Scroll down to new Message
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+});
+
+//Message Submit
+// chatForm.addEventListener('submit', e => {
+//     e.preventDefault();
+//     //Get Message Text
+//     const msg = e.target.elements.msg.value;
+
+//     //Emit Message to Server
+//     socket.emit('chatMessage', msg);
+
+//     //Clear Input Message
+//     e.target.elements.msg.value = '';
+//     e.target.elements.msg.focus();
+// });
+
+//Output Message to DOM
+function outputMessage(message) {
+  const div = document.createElement("div");
+  div.classList.add("message");
+  div.innerHTML = `<p class="meta">${message.username} <span>${message.time}</span></p>
+    <p class="text">
+        ${message.text}
+    </p>`;
+
+  document.querySelector(".chat-messages").appendChild(div);
+}
+
+//Add Room Name to DOM
+function outputRoomName(room) {
+  roomName.innerHTML = room;
+}
+
+//Add Users to DOM
+function outputUsers(users) {
+  document.getElementById("pagecount").innerHTML = users.length;
+  // console.log("Connetion Count: - " + users.length);
+  pageUsers.innerHTML = `
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>jobtitle</th>
+        <th>Company</th>
+        <th>Page</th>
+      </tr>
+      ${users
+        .map(
+          (user) => `
+        <tr>
+          <td>${user.id}</td>
+          <td>${user.name}</td>
+          <td>${user.email}</td>
+          <td>${user.jobtitle}</td>
+          <td>${user.company}</td>
+          <td>${user.page}</td>
+        </tr>
+        `
+        )
+        .join("")}
+  `;
+  // userList.innerHTML = `
+  //     ${users.map(user => `<li>${user.username}</li>`).join('')}
+  // `;
+}
+
+socket.on("disconnect", (reason) => {
+  console.log(`Disconnected: ${reason}`);
+
+});
+
+socket.on("reconnect", (reason) => {
+  console.log(`reconnect: ${reason}`);
+
+  socket.emit("attendeesCount", {
+    name: user_cookie[0],
+    email: user_cookie[1],
+    jobtitle: user_cookie[2],
+    company: user_cookie[3],
+    page: page,
+    userId: user_cookie[4],
+  });
+
+});
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+});
